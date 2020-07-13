@@ -20,7 +20,7 @@ class Order {
   @JoinColumn({ name: 'customer' })
   customer: Customer;
 
-  @OneToMany(() => OrdersProducts, order_products => order_products, {
+  @OneToMany(() => OrdersProducts, order_products => order_products.order, {
     cascade: true,
     eager: true,
   })
